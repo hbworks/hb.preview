@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>hb.preview v1.3</title>
+<style>
+#hb_preview{ position: relative; }
+#hb_preview2{ position: relative; }
+.hb_show{ position: relative; width: 500px; height: 300px; }
+.hb_show li{ position: absolute; opacity: 0; }
+.current { background: #EEE; }
+</style>
+</head>
+<body>
+<div id="hb_preview">
+	<ul class="hb_show">
+		<li>aaa</li>
+		<li>bbb</li>
+		<li>ccc</li>
+		<li>ddd</li>
+		<li>EEE</li>
+		<li>FFF</li>
+		<li>GGG</li>
+		<li>HHH</li>
+	</ul>
+	<div class="hb_th">
+		<ul>
+			<li>リンク1</li>
+			<li>リンク2</li>
+			<li>リンク3</li>
+			<li>リンク4</li>
+		</ul>
+		<ul>
+			<li>リンク5</li>
+			<li>リンク6</li>
+			<li>リンク7</li>
+			<li>リンク8</li>
+		</ul>
+	</div>
+</div>
+
+<div id="hb_preview2">
+	<ul class="hb_show">
+		<li>aaa</li>
+		<li>bbb</li>
+		<li>ccc</li>
+		<li>ddd</li>
+	</ul>
+	<ul class="hb_th">
+		<li>リンク1</li>
+		<li>リンク2</li>
+		<li>リンク3</li>
+		<li>リンク4</li>
+	</ul>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="hb.preview.js"></script>
+<script>
+$(function(){
+	$('#hb_preview').hbPreview({
+		fadeSpeed:1000
+	});
+	$('#hb_preview2').hbPreview({
+		fadeSpeed:500
+	});
+})
+</script>
+</body>
+</html>
