@@ -1,18 +1,18 @@
 /*
- * hb.preview v1.2
+ * hb.preview v1.3
 */
 (function($){
 	$.fn.hbPreview = function(options) {
 			var option = $.extend({}, $.fn.hbPreview.defaults, options);
 			var element = this;
 			var hb_show = $('.hb_show > li',element);
-			var hb_th = $('.hb_th > li',element);
+			var hb_th = $('.hb_th li',element);
 			hb_show.first().css({display:'block',opacity:'1'});
 			hb_th.first().addClass('current');
 			hb_th.hover(function(){
 				$(this).css({cursor:'pointer'});
-			}).click(function(){
-		var num = $(this).index();
+			}).on('click',function(){
+		var num = hb_th.index(this);
 		if($(this).hasClass('current')){
 			return false;
 		}
