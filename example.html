@@ -2,23 +2,26 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>hb.preview v1.3</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>hb.preview v1.4</title>
 <style>
-#hb_preview{ position: relative; }
-#hb_preview2{ position: relative; }
-.hb_show{ position: relative; width: 500px; height: 300px; }
+ul,li{ margin: 0; padding: 0; }
+ul{ margin: 0 0 10px; }
+.hb_show{ position: relative; overflow:hidden; background: url(images/loading.gif) no-repeat center center;}
 .hb_show li{ position: absolute; opacity: 0; }
+.hb_show li img{ width: 100%; height: auto; }
 .current { background: #EEE; }
+img{ vertical-align: bottom; }
 </style>
 </head>
 <body>
 <div id="hb_preview">
 	<ul class="hb_show">
-		<li>aaa</li>
-		<li>bbb</li>
-		<li>ccc</li>
-		<li>ddd</li>
-		<li>EEE</li>
+		<li><img src="http://www.hb-works.jp/photo/futta0050.jpg" alt="" width="1600" height="1200"></li>
+		<li><img src="http://www.hb-works.jp/photo/futta0292.jpg" alt="" width="1600" height="1200"></li>
+		<li><img src="http://www.hb-works.jp/photo/futta0921.jpg" alt="" width="1600" height="1200"></li>
+		<li><img src="http://www.hb-works.jp/photo/futta1144.jpg" alt="" width="1600" height="1200"></li>
+		<li><img src="http://www.hb-works.jp/photo/futta1145.jpg" alt="" width="1600" height="1200"></li>
 		<li>FFF</li>
 		<li>GGG</li>
 		<li>HHH</li>
@@ -41,10 +44,10 @@
 
 <div id="hb_preview2">
 	<ul class="hb_show">
-		<li>aaa</li>
-		<li>bbb</li>
-		<li>ccc</li>
-		<li>ddd</li>
+		<li>aaa<br>aaa</li>
+		<li>bbb<br>bbb<br>bbb<br>bbb</li>
+		<li>ccc<br>ccc</li>
+		<li>ddd<br>ddd</li>
 	</ul>
 	<ul class="hb_th">
 		<li>リンク1</li>
@@ -58,9 +61,7 @@
 <script src="hb.preview.js"></script>
 <script>
 $(function(){
-	$('#hb_preview').hbPreview({
-		fadeSpeed:1000
-	});
+	$('#hb_preview').hbPreview();
 	$('#hb_preview2').hbPreview({
 		fadeSpeed:500
 	});
